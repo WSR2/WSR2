@@ -103,5 +103,12 @@ namespace WSR2
                 captchaTextBox.Text = "";
             }
         }
+
+        private void GuestButton_Click(object sender, EventArgs e)
+        {
+            Forms.ClientForm clientForm = new Forms.ClientForm();
+            clientForm.Show();
+            this.Hide();
+        }
     }
 }

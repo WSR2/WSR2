@@ -128,6 +128,7 @@ namespace WSR2
             this.guestButton.TabIndex = 9;
             this.guestButton.Text = "Войти как гость";
             this.guestButton.UseVisualStyleBackColor = true;
+            this.guestButton.Click += new System.EventHandler(this.GuestButton_Click);
             // 
             // AuthorizationForm
             // 

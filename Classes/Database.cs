@@ -58,7 +58,7 @@ namespace WSR2.Classes
                     }
                 }
 
-                string statement = "Error";
+                string statement = "Гость";
                 connection.Close();
                 return statement;
             }
