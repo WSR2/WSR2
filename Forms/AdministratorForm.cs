@@ -9,11 +9,12 @@ namespace WSR2.Forms
         {
             InitializeComponent();
 
-            productsDataGridView.GridColor = Color.FromArgb(118, 227, 131);
+            productsDataGridView.GridColor = Color.FromArgb(118, 227, 131); //Выбор цвета
             deleteButton.BackColor = Color.FromArgb(73, 140, 81);
             changeButton.BackColor = Color.FromArgb(73, 140, 81);
             userLabel.Text = "Вы вошли как:";
             userLabel.Text = userLabel.Text + " " + Classes.Database.GetUserRoleName(Classes.Database.userId.ToString());
+            
             Classes.Database.GetProducts(productsDataGridView);
         }
 

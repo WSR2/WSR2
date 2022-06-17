@@ -27,16 +27,17 @@ namespace WSR2
 
         public Bitmap GenerateCaptcha(int Width, int Height) //Создание графической капчи
         {
+            _captchaCode = string.Empty;
             Random random = new Random();
             string alphabet = "0123456789QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm";
             int xPos = (Width - 110);
             int yPos = (Height - 50);
             Bitmap captchaImage = new Bitmap(Width, Height);
             Graphics graphics = Graphics.FromImage(captchaImage);
+            
             Brush[] colors = { Brushes.Yellow, Brushes.Wheat, Brushes.Red, Brushes.Orange, Brushes.Cyan };
 
             graphics.Clear(Color.Gray);
-            _captchaCode = string.Empty;
             
             for (int i = 0; i < 6; i++) //Генерация кода
             {
@@ -70,6 +71,7 @@ namespace WSR2
             if (captchaTextBox.Text != _captchaCode) //Проверка капчи на правильность
             {
                 MessageBox.Show("Вы ввели неправильную капчу", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                
                 captchaPictureBox.Image = GenerateCaptcha(captchaPictureBox.Width, captchaPictureBox.Height);
                 captchaTextBox.Text = "";
                 return;
@@ -79,12 +81,14 @@ namespace WSR2
                 if (Classes.Database.userId == 1)
                 {
                     Forms.AdministratorForm administratorForm = new Forms.AdministratorForm();
+                    
                     administratorForm.Show();
                     this.Hide();
                 }
                 if (Classes.Database.userId == 2 || Classes.Database.userId == 3)
                 {
                     Forms.ClientForm clientForm = new Forms.ClientForm();
+                    
                     clientForm.Show();
                     this.Hide();
                 }
@@ -97,6 +101,7 @@ namespace WSR2
             else
             {
                 MessageBox.Show("Вы ввели неправильный логин или пароль", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                
                 loginTextBox.Text = "";
                 passwordTextBox.Text = "";
                 captchaPictureBox.Image = GenerateCaptcha(captchaPictureBox.Width, captchaPictureBox.Height);
@@ -107,6 +112,7 @@ namespace WSR2
         private void GuestButton_Click(object sender, EventArgs e)
         {
             Forms.ClientForm clientForm = new Forms.ClientForm();
+            
             clientForm.Show();
             this.Hide();
         }
