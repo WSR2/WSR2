@@ -80,8 +80,6 @@ namespace WSR2.Classes
                 using (SqlCommand command = new SqlCommand(databaseCommand, connection))
                 using (SqlDataAdapter adapter = new SqlDataAdapter())
                 {
-                    command.ExecuteNonQuery();
-
                     adapter.Fill(dataTable);
                     dataGridView.DataSource = dataTable;
 

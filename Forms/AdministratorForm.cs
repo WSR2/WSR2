@@ -19,7 +19,7 @@ namespace WSR2.Forms
             productsDataGridView.GridColor = Color.FromArgb(118, 227, 131);
             userLabel.Text = "Вы вошли как:";
             userLabel.Text = userLabel.Text + " " + Classes.Database.GetUserRoleName(Classes.Database.userId);
-            Classes.Database.GetProducts(productsDataGridView);
+            //Classes.Database.GetProducts(productsDataGridView);
         }
     }
 }

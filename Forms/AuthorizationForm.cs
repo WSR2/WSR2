@@ -78,7 +78,7 @@ namespace WSR2
             {
                 Forms.AdministratorForm administratorForm = new Forms.AdministratorForm();
                 administratorForm.Show();
-                this.Close();
+                this.Hide();
             }
             else
             {
