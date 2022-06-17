@@ -16,5 +16,15 @@ namespace WSR2.Forms
             userLabel.Text = userLabel.Text + " " + Classes.Database.GetUserRoleName(Classes.Database.userId.ToString());
             Classes.Database.GetProducts(productsDataGridView);
         }
+
+        private void ChangeButton_Click(object sender, System.EventArgs e)
+        {
+
+        }
+
+        private void DeleteButton_Click(object sender, System.EventArgs e)
+        {
+            
+        }
     }
 }

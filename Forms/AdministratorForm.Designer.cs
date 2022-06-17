@@ -42,10 +42,11 @@ namespace WSR2.Forms
             this.productsDataGridView.AllowUserToAddRows = false;
             this.productsDataGridView.AllowUserToDeleteRows = false;
             this.productsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.productsDataGridView.ColumnHeadersVisible = false;
             this.productsDataGridView.Location = new System.Drawing.Point(12, 14);
             this.productsDataGridView.MultiSelect = false;
             this.productsDataGridView.Name = "productsDataGridView";
+            this.productsDataGridView.ReadOnly = true;
+            this.productsDataGridView.RowHeadersVisible = false;
             this.productsDataGridView.RowHeadersWidth = 51;
             this.productsDataGridView.RowTemplate.Height = 24;
             this.productsDataGridView.Size = new System.Drawing.Size(754, 479);
@@ -68,6 +69,7 @@ namespace WSR2.Forms
             this.deleteButton.TabIndex = 2;
             this.deleteButton.Text = "Удалить строку";
             this.deleteButton.UseVisualStyleBackColor = true;
+            this.deleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
             // 
             // changeButton
             // 
@@ -77,6 +79,7 @@ namespace WSR2.Forms
             this.changeButton.TabIndex = 3;
             this.changeButton.Text = "Изменить строку";
             this.changeButton.UseVisualStyleBackColor = true;
+            this.changeButton.Click += new System.EventHandler(this.ChangeButton_Click);
             // 
             // AdministratorForm
             // 

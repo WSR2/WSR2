@@ -49,10 +49,11 @@ namespace WSR2.Forms
             this.productsDataGridView.AllowUserToAddRows = false;
             this.productsDataGridView.AllowUserToDeleteRows = false;
             this.productsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.productsDataGridView.ColumnHeadersVisible = false;
             this.productsDataGridView.Location = new System.Drawing.Point(12, 14);
             this.productsDataGridView.MultiSelect = false;
             this.productsDataGridView.Name = "productsDataGridView";
+            this.productsDataGridView.ReadOnly = true;
+            this.productsDataGridView.RowHeadersVisible = false;
             this.productsDataGridView.RowHeadersWidth = 51;
             this.productsDataGridView.RowTemplate.Height = 24;
             this.productsDataGridView.Size = new System.Drawing.Size(754, 479);

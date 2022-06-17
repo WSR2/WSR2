@@ -73,14 +73,11 @@ namespace WSR2.Classes
                 string databaseCommand = "SELECT * FROM [Product]";
                 DataTable dataTable = new DataTable();
 
-                using (SqlCommand command = new SqlCommand(databaseCommand, connection))
-                using (SqlDataAdapter adapter = new SqlDataAdapter())
-                {
-                    adapter.Fill(dataTable);
-                    dataGridView.DataSource = dataTable;
+                SqlDataAdapter adapter = new SqlDataAdapter(databaseCommand, connection);
+                adapter.Fill(dataTable);
+                dataGridView.DataSource = dataTable;
 
-                    connection.Close();
-                }
+                connection.Close();
             }
         }
     }
