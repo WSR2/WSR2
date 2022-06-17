@@ -12,7 +12,7 @@ namespace WSR2.Classes
     public class Database
     {
         public static string connectionPath = @"Data Source=PC\SQLEXPRESS;Initial Catalog=Trade;Integrated Security=True";
-        public static string userId = string.Empty;
+        public static int userId = -1;
 
         public static bool LoginConfirmation(string Login, string Password)
         {

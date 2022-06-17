@@ -76,9 +76,23 @@ namespace WSR2
             }
             if (Classes.Database.LoginConfirmation(loginTextBox.Text.ToString(), passwordTextBox.Text.ToString()) == true) //Проверка сущесвующего логина и пароля в БД
             {
-                Forms.AdministratorForm administratorForm = new Forms.AdministratorForm();
-                administratorForm.Show();
-                this.Hide();
+                if (Classes.Database.userId == 1)
+                {
+                    Forms.AdministratorForm administratorForm = new Forms.AdministratorForm();
+                    administratorForm.Show();
+                    this.Hide();
+                }
+                if (Classes.Database.userId == 2 || Classes.Database.userId == 3)
+                {
+                    Forms.ClientForm clientForm = new Forms.ClientForm();
+                    clientForm.Show();
+                    this.Hide();
+                }
+                if (Classes.Database.userId == -1)
+                {
+                    MessageBox.Show("Непредвиденная ошибка", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
             }
             else
             {

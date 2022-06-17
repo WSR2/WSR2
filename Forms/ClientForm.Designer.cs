@@ -63,7 +63,7 @@ namespace WSR2.Forms
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1099, 506);
+            this.ClientSize = new System.Drawing.Size(1037, 506);
             this.Controls.Add(this.userLabel);
             this.Controls.Add(this.productsDataGridView);
             this.Font = new System.Drawing.Font("Comic Sans MS", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
