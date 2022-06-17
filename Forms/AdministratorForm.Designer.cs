@@ -32,6 +32,8 @@ namespace WSR2.Forms
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdministratorForm));
             this.productsDataGridView = new System.Windows.Forms.DataGridView();
             this.userLabel = new System.Windows.Forms.Label();
+            this.deleteButton = new System.Windows.Forms.Button();
+            this.changeButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.productsDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,12 +60,32 @@ namespace WSR2.Forms
             this.userLabel.TabIndex = 1;
             this.userLabel.Text = "Вы вошли как:";
             // 
+            // deleteButton
+            // 
+            this.deleteButton.Location = new System.Drawing.Point(772, 471);
+            this.deleteButton.Name = "deleteButton";
+            this.deleteButton.Size = new System.Drawing.Size(261, 23);
+            this.deleteButton.TabIndex = 2;
+            this.deleteButton.Text = "Удалить строку";
+            this.deleteButton.UseVisualStyleBackColor = true;
+            // 
+            // changeButton
+            // 
+            this.changeButton.Location = new System.Drawing.Point(772, 442);
+            this.changeButton.Name = "changeButton";
+            this.changeButton.Size = new System.Drawing.Size(261, 23);
+            this.changeButton.TabIndex = 3;
+            this.changeButton.Text = "Изменить строку";
+            this.changeButton.UseVisualStyleBackColor = true;
+            // 
             // AdministratorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1037, 506);
+            this.Controls.Add(this.changeButton);
+            this.Controls.Add(this.deleteButton);
             this.Controls.Add(this.userLabel);
             this.Controls.Add(this.productsDataGridView);
             this.Font = new System.Drawing.Font("Comic Sans MS", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -82,5 +104,7 @@ namespace WSR2.Forms
 
         private System.Windows.Forms.DataGridView productsDataGridView;
         private System.Windows.Forms.Label userLabel;
+        private System.Windows.Forms.Button deleteButton;
+        private System.Windows.Forms.Button changeButton;
     }
 }

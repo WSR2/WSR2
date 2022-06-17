@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Data.SqlClient;
+﻿using System.Data.SqlClient;
 using System.Data;
 using System.Windows.Forms;
+using System;
 
 namespace WSR2.Classes
 {
@@ -29,7 +25,7 @@ namespace WSR2.Classes
                     {
                         if (reader["UserLogin"].ToString() == Login && reader["UserPassword"].ToString() == Password)
                         {
-                            userId = reader["UserRole"].ToString(); 
+                            userId = Convert.ToInt32(reader["UserRole"]); 
                             connection.Close();
                             return true;
                         }
